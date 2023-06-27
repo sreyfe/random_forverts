@@ -7,10 +7,10 @@ import tweepy
 from PIL import Image, ImageChops
 
 client = tweepy.Client(
-    consumer_key="oEbfq6WY8tkCaynYjPHj9latH",
-    consumer_secret="wgIyu8aZ2AfGrCarej5VmUIY9QzISomFyWxkIyhmAl2Ig28vnP",
-    access_token="1471244735536939014-klhRyvxkP1gnEJXidUg4PnJE9Drg6c",
-    access_token_secret="R4fxqF78ye2O0TKqpw4qLRcVHYQxhJ3lSxqqSvfOXK87n"
+    consumer_key="",
+    consumer_secret="",
+    access_token="",
+    access_token_secret=""
 )
 
 media_ids = []
