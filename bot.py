@@ -6,10 +6,13 @@ import PyPDF2
 import tweepy
 from PIL import Image, ImageChops
 
+client = tweepy.Client(
+    consumer_key="oEbfq6WY8tkCaynYjPHj9latH",
+    consumer_secret="wgIyu8aZ2AfGrCarej5VmUIY9QzISomFyWxkIyhmAl2Ig28vnP",
+    access_token="1471244735536939014-klhRyvxkP1gnEJXidUg4PnJE9Drg6c",
+    access_token_secret="R4fxqF78ye2O0TKqpw4qLRcVHYQxhJ3lSxqqSvfOXK87n"
+)
 
-auth = tweepy.OAuthHandler("")
-auth.set_access_token("")
-api = tweepy.API(auth, )
 media_ids = []
 art_url = ""
 date = ""
@@ -27,6 +30,7 @@ def crop():
 
 	for file in os.listdir('.'):
 		if file.endswith('.png'):
+
 			bg = Image.open(file) # The image to be cropped
 			w, h = bg.size
 			cropped = bg.crop((0, 150, w, h))
