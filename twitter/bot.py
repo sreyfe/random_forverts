@@ -80,6 +80,9 @@ def scrape():
                         os.remove(file)
 
         print(url)
+        opener = urllib.request.build_opener()
+        opener.addheaders = [('User-agent', 'Mozilla/5.0')]
+        urllib.request.install_opener(opener)
 
         urllib.request.urlretrieve(url, "pdf.pdf")
 
@@ -102,3 +105,4 @@ status = date + "\n" + art_url
 #post_result = api.update_status(status, media_ids=media_ids)
 post_result = client.create_tweet(text=status, media_ids=media_ids)
 print(date)
+print(url)
